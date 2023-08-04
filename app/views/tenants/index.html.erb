@@ -1,0 +1,43 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Tenants</h1>
+
+<table class="table table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th>Tenant Id</th>
+        <th>First Name:</th>
+        <th>Last Name:</th>
+        <th>apartment_No</th>
+        <th>phone:</th>
+        <th>email:</th>
+        <th>building:</th>
+      </tr>
+
+        
+        
+    </thead>
+
+    <tbody>
+      <% @tenants.each do |tenant| %>
+        <tr>
+          <td><%=tenant.id %> </td>
+          <td><%=tenant.first_name %> </td>
+          <td><%=tenant.last_name %> </td>
+          <td><%=tenant.apartment_no %> </td>
+          <td><%=tenant.phone %> </td>
+          <td><%=tenant.email %> </td>
+          <td><%=tenant.building_id %> </td>
+          
+          <td><%= link_to 'Show', tenant, method: :show, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %></td>
+          <td><%= link_to 'EDIT', tenant, method: :edit, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %></td> 
+          <td><%= link_to 'Delete', tenant, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %></td>
+          
+        </tr>
+      <% end %>
+ 
+    </tbody>
+
+<div>
+  <%= link_to "New Tenant", new_tenant_path, class:"btn btn-outline-primary" %>
+</div>

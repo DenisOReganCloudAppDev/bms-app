@@ -1,0 +1,50 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Building</h1>
+
+<table class="table table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th>Building No.</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th></th>
+        <th></th>
+      </tr>
+
+        
+        
+    </thead>
+
+    <tbody>
+      <% @buildings.each do |building| %>
+        <tr>
+          <td><%=building.id %> </td>
+          <td><%=building.name %> </td>
+          <td><%=building.address %> </td>
+          <td><%=building.phone %> </td>
+          
+          <td><%= link_to 'Show', building, method: :show, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %></td>
+          <td><%= link_to 'EDIT', building, method: :edit, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %></td> 
+          <td><%= link_to 'Delete', building, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %></td>
+          
+        </tr>
+      <% end %>
+ 
+    </tbody>
+
+<div>
+  <%= link_to "New Building", new_building_path, class:"btn btn-outline-primary" %>
+</div>
+
+
+
+
+
+
+
+
+
+
+

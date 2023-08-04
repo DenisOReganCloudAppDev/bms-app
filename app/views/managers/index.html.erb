@@ -1,0 +1,41 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Managers</h1>
+
+<table class="table table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th>Manager Id</th>
+        <th>First Name:</th>
+        <th>Last Name:</th>
+        <th>phone:</th>
+        <th>email:</th>
+        <th>building:</th>
+      </tr>
+
+        
+        
+    </thead>
+
+    <tbody>
+      <% @managers.each do |manager| %>
+        <tr>
+          <td><%=manager.id %> </td>
+          <td><%=manager.first_name %> </td>
+          <td><%=manager.last_name %> </td>
+          <td><%=manager.phone %> </td>
+          <td><%=manager.email %> </td>
+          <td><%=manager.building_id %> </td>
+          
+          <td><%= link_to 'Show', manager, method: :show, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %></td>
+          <td><%= link_to 'EDIT', manager, method: :edit, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %></td> 
+          <td><%= link_to 'Delete', manager, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %></td>
+          
+        </tr>
+      <% end %>
+ 
+    </tbody>
+
+<div>
+  <%= link_to "New Manager", new_manager_path, class:"btn btn-outline-primary" %>
+</div>
