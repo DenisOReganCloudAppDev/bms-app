@@ -1,4 +1,5 @@
 class BuildingsController < ApplicationController
+  protect_from_forgery with: :exception, unless: -> {request.format.json?}
   before_action :set_building, only: %i[ show edit update destroy ]
 
   # GET /buildings or /buildings.json

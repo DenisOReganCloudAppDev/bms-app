@@ -1,4 +1,5 @@
 class MaintenanceRequestsController < ApplicationController
+  protect_from_forgery with: :exception, unless: -> {request.format.json?}
   before_action :set_maintenance_request, only: %i[ show edit update destroy ]
 
   # GET /maintenance_requests or /maintenance_requests.json
