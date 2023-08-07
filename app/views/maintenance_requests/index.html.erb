@@ -1,0 +1,59 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Maintenance Request</h1>
+
+<table class="table table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th>Tenant</th>
+        <th>Request Info</th>
+        <th>Request Date</th>
+        <th>Completed</th>
+        <th>Comment</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+
+        
+        
+    </thead>
+
+    <tbody>
+      <% @maintenance_requests.each do |maintenance_request| %>
+        <tr>
+          <td><%=maintenance_request.tenant_id %> </td>
+          <td><%=maintenance_request.requestinfo %> </td>
+          <td><%=maintenance_request.completed %> </td>
+          <td><%=maintenance_request.comment %> </td>
+          
+          <td><%= link_to 'Show', maintenance_request, method: :show, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %></td>
+          <td><%= link_to 'EDIT', maintenance_request, method: :edit, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %></td> 
+          <td><%= link_to 'Delete', maintenance_request, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %></td>
+          
+        </tr>
+      <% end %>
+ 
+    </tbody>
+
+<div>
+  <%= link_to "New Maintenance Request", new_maintenance_request_path, class:"btn btn-outline-primary" %>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

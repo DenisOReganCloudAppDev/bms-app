@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :maintenance_requests
   resources :managers
   resources :engineers
   resources :tenants

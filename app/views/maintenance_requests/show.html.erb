@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @maintenance_request %>
+
+<div>
+  <%= link_to "Edit this maintenance request", edit_maintenance_request_path(@maintenance_request) %> |
+  <%= link_to "Back to maintenance requests", maintenance_requests_path %>
+
+  <%= button_to "Destroy this maintenance request", @maintenance_request, method: :delete %>
+</div>
