@@ -22159,3 +22159,108 @@ Processing by TenantsController#index as JSON
 Completed 200 OK in 67ms (Views: 66.3ms | ActiveRecord: 0.4ms | Allocations: 2740)
 
 
+Started GET "/" for ::1 at 2023-08-07 22:32:19 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 341)
+  Rendered home/_header.html.erb (Duration: 16.4ms | Allocations: 594)
+  Rendered layout layouts/application.html.erb (Duration: 257.2ms | Allocations: 41128)
+Completed 200 OK in 278ms (Views: 262.2ms | ActiveRecord: 0.0ms | Allocations: 45353)
+
+
+Started GET "/buildings" for ::1 at 2023-08-07 22:32:22 +0100
+Processing by BuildingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buildings/index.html.erb within layouts/application
+  [1m[36mBuilding Load (0.3ms)[0m  [1m[34mSELECT "buildings".* FROM "buildings"[0m
+  ↳ app/views/buildings/index.html.erb:21
+  Rendered buildings/index.html.erb within layouts/application (Duration: 41.8ms | Allocations: 6914)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 258)
+  Rendered layout layouts/application.html.erb (Duration: 53.1ms | Allocations: 10098)
+Completed 200 OK in 89ms (Views: 70.6ms | ActiveRecord: 1.8ms | Allocations: 12883)
+
+
+Started GET "/tenants" for ::1 at 2023-08-07 22:32:24 +0100
+Processing by TenantsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tenants/index.html.erb within layouts/application
+  [1m[36mTenant Load (0.3ms)[0m  [1m[34mSELECT "tenants".* FROM "tenants"[0m
+  ↳ app/views/tenants/index.html.erb:22
+  Rendered tenants/index.html.erb within layouts/application (Duration: 45.5ms | Allocations: 7970)
+  Rendered home/_header.html.erb (Duration: 4.0ms | Allocations: 256)
+  Rendered layout layouts/application.html.erb (Duration: 60.3ms | Allocations: 11118)
+Completed 200 OK in 72ms (Views: 61.5ms | ActiveRecord: 1.1ms | Allocations: 13343)
+
+
+Started GET "/managers" for ::1 at 2023-08-07 22:32:30 +0100
+Processing by ManagersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering managers/index.html.erb within layouts/application
+  [1m[36mManager Load (0.2ms)[0m  [1m[34mSELECT "managers".* FROM "managers"[0m
+  ↳ app/views/managers/index.html.erb:21
+  Rendered managers/index.html.erb within layouts/application (Duration: 11.6ms | Allocations: 3847)
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 256)
+  Rendered layout layouts/application.html.erb (Duration: 21.7ms | Allocations: 6995)
+Completed 200 OK in 32ms (Views: 23.4ms | ActiveRecord: 1.0ms | Allocations: 8661)
+
+
+Started GET "/engineers" for ::1 at 2023-08-07 22:32:32 +0100
+Processing by EngineersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering engineers/index.html.erb within layouts/application
+  [1m[36mEngineer Load (0.4ms)[0m  [1m[34mSELECT "engineers".* FROM "engineers"[0m
+  ↳ app/views/engineers/index.html.erb:21
+  Rendered engineers/index.html.erb within layouts/application (Duration: 46.7ms | Allocations: 3877)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 256)
+  Rendered layout layouts/application.html.erb (Duration: 56.4ms | Allocations: 7024)
+Completed 200 OK in 70ms (Views: 52.7ms | ActiveRecord: 6.4ms | Allocations: 8678)
+
+
+Started GET "/maintenance_requests" for ::1 at 2023-08-07 22:32:36 +0100
+Processing by MaintenanceRequestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering maintenance_requests/index.html.erb within layouts/application
+  [1m[36mMaintenanceRequest Load (0.3ms)[0m  [1m[34mSELECT "maintenance_requests".* FROM "maintenance_requests"[0m
+  ↳ app/views/maintenance_requests/index.html.erb:23
+  Rendered maintenance_requests/index.html.erb within layouts/application (Duration: 41.3ms | Allocations: 7579)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 256)
+  Rendered layout layouts/application.html.erb (Duration: 50.4ms | Allocations: 10727)
+Completed 200 OK in 74ms (Views: 57.2ms | ActiveRecord: 1.7ms | Allocations: 12453)
+
+
+Started GET "/buildings" for ::1 at 2023-08-07 22:32:39 +0100
+Processing by BuildingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering buildings/index.html.erb within layouts/application
+  [1m[36mBuilding Load (0.4ms)[0m  [1m[34mSELECT "buildings".* FROM "buildings"[0m
+  ↳ app/views/buildings/index.html.erb:21
+  Rendered buildings/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1797)
+  Rendered home/_header.html.erb (Duration: 9.1ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 54.5ms | Allocations: 4703)
+Completed 200 OK in 57ms (Views: 55.4ms | ActiveRecord: 0.4ms | Allocations: 5005)
+
+
+Started GET "/" for ::1 at 2023-08-07 22:32:41 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 244)
+  Rendered layout layouts/application.html.erb (Duration: 32.1ms | Allocations: 3091)
+Completed 200 OK in 41ms (Views: 38.1ms | ActiveRecord: 0.0ms | Allocations: 3353)
+
+
+Started GET "/maintenance_requests" for ::1 at 2023-08-07 22:32:46 +0100
+Processing by MaintenanceRequestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering maintenance_requests/index.html.erb within layouts/application
+  [1m[36mMaintenanceRequest Load (0.2ms)[0m  [1m[34mSELECT "maintenance_requests".* FROM "maintenance_requests"[0m
+  ↳ app/views/maintenance_requests/index.html.erb:23
+  Rendered maintenance_requests/index.html.erb within layouts/application (Duration: 26.6ms | Allocations: 2640)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 45.9ms | Allocations: 5546)
+Completed 200 OK in 51ms (Views: 49.2ms | ActiveRecord: 0.2ms | Allocations: 5825)
+
+
