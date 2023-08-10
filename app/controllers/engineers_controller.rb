@@ -1,4 +1,5 @@
 class EngineersController < ApplicationController
+  protect_from_forgery with: :exception, unless: -> {request.format.json?}
   before_action :set_engineer, only: %i[ show edit update destroy ]
 
   # GET /engineers or /engineers.json
